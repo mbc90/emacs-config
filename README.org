@@ -1,4 +1,4 @@
-#+TITLE My Emacs Config
+#+TITLE: My Emacs Config
 * IMPORTANT
  NOTE: The first time you load your configuration on a new machine, you'll
  need to run the following command interactively so that mode line icons
