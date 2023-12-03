@@ -8,7 +8,7 @@
 ;; Ivy
 (use-package ivy
   :straight t)
-(ivy-mode)
+(ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 ;; enable this if you want `swiper' to use it
@@ -30,10 +30,58 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+;;------------
+(use-package ivy-rich
+  :straight t
+  :after counsel
+  :init
+  (ivy-rich-mode 1))
+;;---------------
+;;Counsel
+(use-package counsel
+  :straight t
+  :ensure t
+  :bind (("M-x" . counsel-M-x)
+         ("C-x b" . counsel-ibuffer)
+         ("C-x C-f" . counsel-find-file)
+         :map minibuffer-local-map
+         ("C-r" . 'counsel-minibuffer-history)))
+
 ;; keybindings
 (use-package general
   :straight t
   :config
   (general-evil-setup)
+  (general-create-definer zosmac/leader-keys
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+  (zosmac/leader-keys
+    ;;toggles 
+    "t"  '(:ignore t :which-key "toggles")
+    "tt" '(counsel-load-theme :which-key "choose theme")
+    ;; manage windows
+    "w"  '(:ignore w :which-key "Window")
+    "wd" '(delete-window :which-key "Delete Window")
+    "wl" '(windmove-right :which-key "Move to the right")
+    "wh" '(windmove-left :which-key "Move to the left")
+    "wk" '(windmove-up :which-key "Move up")
+    "wj" '(windmove-down :which-key "Move down")
+    "wv" '(split-window-right :which-key "v-split")
+    "ws" '(split-window-below :which-key "h-split")
+    ;; find stuff
+    "f" '(:ignore f :which-key "find")
+    "ff" '(find-file :which-key "find file")
+    ;; Buffer stuff
+    "b"  '(:ignore b :which-key "buffer")
+    "bd" '(kill-current-buffer :which-key "Delete Buffer")
+    ;; reload
+    "r" '(:ignore r :which-key "reload")
+    "rr" '(eval-buffer :which-key "reload config")
+    ))
+      
+
+
 
   (provide 'init-keybindings)

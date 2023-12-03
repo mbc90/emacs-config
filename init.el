@@ -16,6 +16,9 @@
   (load bootstrap-file nil 'nomessage))
 (straight-use-package 'use-package)
 ;;--------------------------
+;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 ;; load path for other files
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 ;; add other files
@@ -24,6 +27,10 @@
 ;; doom-modeline
 (require 'init-modeline)
 ;; doom-themes
-(require 'init-doom-themes)
-;; latex
-;;(require 'init-latex)
+(require 'init-themes)
+;; keybindings
+(require 'init-keybindings)
+;;org-mode
+(require 'init-org)
+;; make my code pretty again!
+(require 'init-code)
