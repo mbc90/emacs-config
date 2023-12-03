@@ -1,0 +1,5 @@
+(use-package general
+  :straight t
+  :config
+  (general-evil-setup)
+  
