@@ -18,6 +18,8 @@
 ;;--------------------------
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+;; stop emacs backup files
+(setq make-backup-files nil)
 
 ;; load path for other files
 (add-to-list 'load-path "~/.emacs.d/lisp/")
