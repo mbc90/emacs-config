@@ -36,3 +36,5 @@
 (require 'init-org)
 ;; make my code pretty again!
 (require 'init-code)
+;; navigation stuff like tabs/windows/buffers
+(require 'init-navigation)

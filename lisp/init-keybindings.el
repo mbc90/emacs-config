@@ -60,7 +60,9 @@
   (zosmac/leader-keys
     ;;toggles 
     "t"  '(:ignore t :which-key "toggles")
-    "tt" '(counsel-load-theme :which-key "choose theme")
+    "tt" '(counsel-load-theme :which-key "Choose Theme")
+    "t]" '(centaur-tabs-forward :which-key "Go forward a tab")
+    "t[" '(centaur-tabs-backward :which-key "Go back a tab")
     ;; manage windows
     "w"  '(:ignore w :which-key "Window")
     "wd" '(delete-window :which-key "Delete Window")
@@ -76,6 +78,8 @@
     ;; Buffer stuff
     "b"  '(:ignore b :which-key "buffer")
     "bd" '(kill-current-buffer :which-key "Delete Buffer")
+    "b[" '(previous-buffer :which-key "Previous Buffer")
+    "b]" '(next-buffer :which-key "Next Buffer")
     ;; reload
     "r" '(:ignore r :which-key "reload")
     "rr" '(eval-buffer :which-key "reload config")
