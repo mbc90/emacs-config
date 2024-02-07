@@ -3,10 +3,14 @@
   :straight t
   :commands toc-org-enable
   :init (add-hook 'org-mode-hook 'toc-org-enable))
+;; todo highlighting
+(use-package hl-todo :straight t)
+(setq global-hl-todo-mode t)
 
 ;; add bullets instead of asteriks 
-(add-hook 'org-mode-hook 'org-indent-mode)
 (use-package org-bullets :straight t)
+(add-hook 'org-mode-hook 'org-indent-mode)
+
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (provide 'init-org)

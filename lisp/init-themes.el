@@ -19,7 +19,7 @@
   (doom-themes-org-config))
 
 ;; font
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 150)
+(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 100)
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
