@@ -38,5 +38,7 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook))
+(use-package all-the-icons
+  :straight t)
 
 (provide 'init-themes)
