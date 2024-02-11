@@ -6,7 +6,6 @@
 ;; todo highlighting
 (use-package hl-todo :straight t)
 (setq global-hl-todo-mode t)
-
 ;; add bullets instead of asteriks 
 (use-package org-bullets :straight t)
 (add-hook 'org-mode-hook 'org-indent-mode)

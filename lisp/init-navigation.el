@@ -1,5 +1,4 @@
-;;(use-package centaur-tabs
-;;  :straight t
+;;(use-package centaur-tab;;  :straight t
 ;;  :demand
 ;;  :config
 ;;  (setq centaur-tabs-style "slant")
@@ -8,5 +7,6 @@
 ;;  :bind
 ;;  ("C-<prior>" . centaur-tabs-backward)
 ;;  ("C-<next>" . centaur-tabs-forward))
-
+(use-package persp-mode
+  :straight t)
 (provide 'init-navigation)
