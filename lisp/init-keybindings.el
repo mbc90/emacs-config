@@ -66,7 +66,7 @@
     "tt" '(counsel-load-theme :which-key "Choose Theme")
     "t]" '(centaur-tabs-forward :which-key "Go forward a tab")
     "t[" '(centaur-tabs-backward :which-key "Go back a tab")
-    "tv" '(vterm :which-key "vterm")
+    "tv" '(vterm-toggle :which-key "vterm")
     ;; manage windows
     "w"  '(:ignore w :which-key "Window")
     "wd" '(delete-window :which-key "Delete Window")
