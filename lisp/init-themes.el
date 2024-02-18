@@ -19,11 +19,14 @@
   (doom-themes-org-config))
 
 ;; font
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 140)
+(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 95)
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
+
+;; remove line numbers in vterm
+(add-hook 'vterm-mode-hook(lambda() (display-line-numbers-mode -1)))
 
 (scroll-bar-mode -1)        ; Disable visible scrollbar
 (tooltip-mode -1)           ; Disable tooltips

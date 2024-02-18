@@ -9,6 +9,10 @@
 (global-tree-sitter-mode)
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 
+;; add zig-mode
+(use-package zig-mode
+  :straight t)
+
 (use-package flycheck
   :straight t
   :ensure t
@@ -42,4 +46,7 @@
   (:map lsp-mode-map
 	      ("<tab>" . company-indent-or-complete-common)))
 
+;; git stuff
+(use-package magit
+  :straight t)
 (provide 'init-code)

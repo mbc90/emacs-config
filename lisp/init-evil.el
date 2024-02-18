@@ -1,7 +1,8 @@
 (use-package evil  
   :straight t
   :init
-  (setq evil-want-keybinding nil)
+  (setq evil-want-keybinding nil
+  evil-undo-system 'undo-redo)
   :config
   (require 'evil)
   (evil-mode 1))

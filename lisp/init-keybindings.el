@@ -7,10 +7,13 @@
   (setq which-key-idle-delay 0.3))
 ;; Ivy
 (use-package ivy
-  :straight t)
-(ivy-mode 1)
+  :straight t
+  :custom
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+:config
+  (ivy-mode)
+)
 ;; enable this if you want `swiper' to use it
 ;; (setq search-default-mode #'char-fold-to-regexp)
 (global-set-key "\C-s" 'swiper)
@@ -58,11 +61,12 @@
     :global-prefix "C-SPC")
 
   (zosmac/leader-keys
-    ;;toggles 
+    ;;toggles
     "t"  '(:ignore t :which-key "toggles")
     "tt" '(counsel-load-theme :which-key "Choose Theme")
     "t]" '(centaur-tabs-forward :which-key "Go forward a tab")
     "t[" '(centaur-tabs-backward :which-key "Go back a tab")
+    "tv" '(vterm :which-key "vterm")
     ;; manage windows
     "w"  '(:ignore w :which-key "Window")
     "wd" '(delete-window :which-key "Delete Window")
@@ -83,6 +87,9 @@
     ;; reload
     "r" '(:ignore r :which-key "reload")
     "rr" '(eval-buffer :which-key "reload config")
+    ;; Git stuff
+    "g" '(:ignore g :which-key "Git")
+    "g g" '(magit-status :which-key "Magit Status")
     ))
       
 
