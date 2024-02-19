@@ -4,3 +4,4 @@ persp-confs/*
 auto-save-list
 .lsp-session-*
 .DS_Store
+tramp
