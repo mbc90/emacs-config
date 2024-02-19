@@ -1,5 +1,5 @@
 ((magit-branch nil)
- (magit-commit
-  ("--all"))
+ (magit-commit nil
+	       ("--all"))
  (magit-dispatch nil)
  (magit-push nil))
