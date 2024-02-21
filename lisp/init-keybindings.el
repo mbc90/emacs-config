@@ -77,13 +77,16 @@
     "wv" '(split-window-right :which-key "v-split")
     "ws" '(split-window-below :which-key "h-split")
     ;; find stuff
-    "f" '(:ignore f :which-key "find")
-    "ff" '(find-file :which-key "find file")
+    "f" '(:ignore f :which-key "Find")
+    "ff" '(find-file :which-key "Find file")
     ;; Buffer stuff
-    "b"  '(:ignore b :which-key "buffer")
+    "b"  '(:ignore b :which-key "Buffer")
     "bd" '(kill-current-buffer :which-key "Delete Buffer")
     "b[" '(previous-buffer :which-key "Previous Buffer")
     "b]" '(next-buffer :which-key "Next Buffer")
+    ;; org mode things
+    "o" '(:ignore o :which-key "Org mode")
+    "op" '(org-latex-export-to-pdf :which-key "Export to PDF")
     ;; reload
     "r" '(:ignore r :which-key "reload")
     "rr" '(eval-buffer :which-key "reload config")
