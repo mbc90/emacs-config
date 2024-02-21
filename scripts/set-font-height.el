@@ -7,6 +7,7 @@
 
 ;;; Code:
 (defun set-font-height ()
+  "Check hostname and return a value."
 (if (string= (system-name) "Macbook-MC.local" )
   (progn 120)
   (progn 95)))
