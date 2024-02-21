@@ -23,6 +23,7 @@
 
 ;; load path for other files
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/scripts")
 ;; add other files
 ;;evil
 (require 'init-evil)

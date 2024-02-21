@@ -50,6 +50,8 @@
          :map minibuffer-local-map
          ("C-r" . 'counsel-minibuffer-history)))
 
+;;buffer-move for better window management 
+(require 'buffer-move)
 ;; keybindings
 (use-package general
   :straight t
@@ -61,6 +63,8 @@
     :global-prefix "C-SPC")
 
   (zosmac/leader-keys
+    ;; persp mode
+    "=" '(perspective-map :which-key "Perspective")
     ;;toggles
     "t"  '(:ignore t :which-key "toggles")
     "tt" '(counsel-load-theme :which-key "Choose Theme")
@@ -70,10 +74,14 @@
     ;; manage windows
     "w"  '(:ignore w :which-key "Window")
     "wd" '(delete-window :which-key "Delete Window")
-    "wl" '(windmove-right :which-key "Move to the right")
-    "wh" '(windmove-left :which-key "Move to the left")
-    "wk" '(windmove-up :which-key "Move up")
-    "wj" '(windmove-down :which-key "Move down")
+    "wl" '(windmove-right :which-key "Move focus right")
+    "wh" '(windmove-left :which-key "Move focus left")
+    "wk" '(windmove-up :which-key "Move focus up")
+    "wj" '(windmove-down :which-key "Move focus down")
+    "wL" '(buf-move-right :which-key "Move right")
+    "wH" '(buf-move-left :which-key "Move left")
+    "wK" '(buf-move-up :which-key "Move up")
+    "wJ" '(buf-move-down :which-key "Move down")
     "wv" '(split-window-right :which-key "v-split")
     "ws" '(split-window-below :which-key "h-split")
     ;; find stuff
@@ -81,6 +89,9 @@
     "ff" '(find-file :which-key "Find file")
     ;; Buffer stuff
     "b"  '(:ignore b :which-key "Buffer")
+    "bb" '(switch-to-buffer :which-key "Switch Buffer")
+    "bi" '(ibuffer :which-key "ibuffer")
+    "bI" '(counsel-ibuffer :which-key "counsel-ibuffer")
     "bd" '(kill-current-buffer :which-key "Delete Buffer")
     "b[" '(previous-buffer :which-key "Previous Buffer")
     "b]" '(next-buffer :which-key "Next Buffer")

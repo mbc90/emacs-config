@@ -1,14 +1,18 @@
-;;(use-package centaur-tab;;  :straight t
-;;  :demand
-;;  :config
-;;  (setq centaur-tabs-style "slant")
-;;  (setq centaur-tabs-set-icons t)
-;;  (centaur-tabs-mode t)
-;;  :bind
-;;  ("C-<prior>" . centaur-tabs-backward)
-;;  ("C-<next>" . centaur-tabs-forward))
-(use-package persp-mode
-  :straight t)
+;;; code:
+(use-package perspective
+  :straight t
+  :init
+  (persp-mode)
+  :custom
+  (persp-suppress-no-prefix-key-warning t))
+
+;; group buffers by name in ibuffer
+(add-hook 'ibuffer-hook
+	  (lambda ()
+	    (persp-ibuffer-set-filter-groups)
+	    (unless (eq ibuffer-sorting-mode 'alphabetic)
+	      (ibuffer-do-sort-by-alphabetic))))
+
 (use-package vterm
   :straight t)
 (use-package vterm-toggle

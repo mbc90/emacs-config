@@ -1,4 +1,5 @@
 ;; this file will keep all general themeing 
+(require 'set-font-height)
 (use-package doom-themes
   :straight t
   :ensure t
@@ -19,7 +20,7 @@
   (doom-themes-org-config))
 
 ;; font
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 95)
+(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height (set-font-height))
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
