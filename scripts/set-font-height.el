@@ -9,7 +9,7 @@
 (defun set-font-height ()
 (if (string= (system-name) "Macbook-MC.local" )
   (progn 120)
-  (progn 100)))
+  (progn 95)))
 
 
 (provide 'set-font-height)
