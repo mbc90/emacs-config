@@ -1,10 +1,13 @@
 #+TITLE: My Emacs Config
+
+I will try to kee this up to date
 * IMPORTANT
  NOTE: The first time you load your configuration on a new machine, you'll
  need to run the following command interactively so that mode line icons
  display correctly:
  M-x all-the-icons-install-fonts
-* vterm
+* Packages
+** vterm
 need to install cmake
 using homebrew 
 #+begin_src
@@ -15,3 +18,8 @@ on Arch
 #+begin_src
 sudo pacman -S cmake
 #+end_src
+
+* Key bindings
+The default leader key is <SPC>. The global is <C-SPC>, use this whenever
+evil mode is not used, currently magit, dired, and ibuffer all need to use the global
+prefix.
