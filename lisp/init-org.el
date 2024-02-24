@@ -12,4 +12,7 @@
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+;;org-tempo makes it faster to input source blocks
+(require 'org-tempo)
+
 (provide 'init-org)
