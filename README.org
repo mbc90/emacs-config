@@ -19,6 +19,11 @@ on Arch
 sudo pacman -S cmake
 #+end_src
 
+on Void Linux
+#+begin_src 
+sudo xbps-install -S cmake libtool
+#+end_src
+
 * Key bindings
 The default leader key is <SPC>. The global is <C-SPC>, use this whenever
 evil mode is not used, currently magit, dired, and ibuffer all need to use the global
