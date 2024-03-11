@@ -5,6 +5,10 @@
 
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
+;; nix-mode to make nix pretty
+(use-package nix-mode
+  :straight t
+  :mode "\\.nix\\'")
 
 (global-tree-sitter-mode)
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)

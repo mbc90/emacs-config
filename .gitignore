@@ -6,3 +6,5 @@ auto-save-list
 .DS_Store
 tramp
 transient
+eln-cache
+session.*
