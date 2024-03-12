@@ -9,17 +9,27 @@ I will try to kee this up to date
 * Packages
 ** vterm
 need to install cmake
-using homebrew 
+*** homebrew 
 #+begin_src
 brew install cmake
 #+end_src
 
-on Arch
+*** Nixos
+add this to your home.nix to install emacs with vterm built in.
+#+begin_src nix
+programs.emacs = {
+	enable = true;
+	extraPackages = epkgs: [
+	epkgs.vterm
+	];
+};
+#+end_src
+*** Arch
 #+begin_src
 sudo pacman -S cmake
 #+end_src
 
-on Void Linux
+*** Void Linux
 #+begin_src 
 sudo xbps-install -S cmake libtool
 #+end_src
