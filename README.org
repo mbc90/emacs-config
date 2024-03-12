@@ -1,6 +1,5 @@
 #+TITLE: My Emacs Config
 
-I will try to kee this up to date
 * IMPORTANT
  NOTE: The first time you load your configuration on a new machine, you'll
  need to run the following command interactively so that mode line icons
@@ -9,7 +8,7 @@ I will try to kee this up to date
 * Packages
 ** vterm
 need to install cmake
-*** homebrew 
+*** Homebrew 
 #+begin_src
 brew install cmake
 #+end_src
@@ -36,5 +35,5 @@ sudo xbps-install -S cmake libtool
 
 * Key bindings
 The default leader key is <SPC>. The global is <C-SPC>, use this whenever
-evil mode is not used, currently magit, dired, and ibuffer all need to use the global
+evil mode is not used. Currently magit and dired need to use the global
 prefix.
