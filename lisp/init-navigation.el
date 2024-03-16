@@ -13,6 +13,10 @@
 	    (unless (eq ibuffer-sorting-mode 'alphabetic)
 	      (ibuffer-do-sort-by-alphabetic))))
 
+;; cool pkg for navigation
+(use-package avy
+  :straight t)
+
 (use-package vterm
   :straight t)
 (use-package vterm-toggle

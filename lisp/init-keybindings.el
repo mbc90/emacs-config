@@ -87,6 +87,8 @@
     ;; find stuff
     "f" '(:ignore f :which-key "Find")
     "ff" '(find-file :which-key "Find file")
+    "fs" '(swiper :which-key "Swiper")
+    "fi" '(avy-goto-char-timer :which-key "Avy goto")
     ;; Buffer stuff
     "b"  '(:ignore b :which-key "Buffer")
     "bb" '(switch-to-buffer :which-key "Switch Buffer")
