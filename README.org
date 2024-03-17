@@ -4,7 +4,7 @@
  NOTE: The first time you load your configuration on a new machine, you'll
  need to run the following command interactively so that mode line icons
  display correctly:
- M-x all-the-icons-install-fonts
+ =M-x all-the-icons-install-fonts=
 * Packages
 ** vterm
 need to install cmake
@@ -32,6 +32,11 @@ sudo pacman -S cmake
 #+begin_src 
 sudo xbps-install -S cmake libtool
 #+end_src
+
+** Ditaa
+used to make graphics out of ASCII in org src-blocks. Find where ever =ditaa.jar= is and
+link it to a folder in =.emacs.d=. the default folder in =init-org.el= is =links=
+
 
 * Key bindings
 The default leader key is <SPC>. The global is <C-SPC>, use this whenever

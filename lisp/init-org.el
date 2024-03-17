@@ -11,6 +11,11 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;; org babel stuff
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t) (shell . t)))
+(setq org-ditaa-jar-path "~/.emacs.d/links/ditaa.jar")
 
 ;;org-tempo makes it faster to input source blocks
 (require 'org-tempo)
