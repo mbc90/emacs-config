@@ -16,7 +16,9 @@
 ;; add zig-mode
 (use-package zig-mode
   :straight t)
-
+;; add rust-mode
+(use-package rust-mode
+  :straight t)
 (use-package flycheck
   :straight t
   :ensure t

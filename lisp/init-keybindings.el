@@ -100,6 +100,10 @@
     ;; org mode things
     "o" '(:ignore o :which-key "Org mode")
     "op" '(org-latex-export-to-pdf :which-key "Export to PDF")
+    "or" '(:ignore r :which-key "Org Roam")
+    "ort" '(org-roam-buffer-toggle :which-key "Buffer toggle")
+    "orf" '(org-roam-node-find :which-key "Node Find")
+    "ori" '(org-roam-node-insert :which-key "Node Insert")
     ;; reload
     "r" '(:ignore r :which-key "reload")
     "rr" '(eval-buffer :which-key "reload config")

@@ -3,6 +3,12 @@
   :straight t
   :commands toc-org-enable
   :init (add-hook 'org-mode-hook 'toc-org-enable))
+;; org-roam
+(use-package org-roam
+  :straight t
+  :custom
+  (org-roam-directory "~/org-roam/"))
+(use-package emacsql-sqlite :straight t)
 ;; todo highlighting
 (use-package hl-todo :straight t)
 (setq global-hl-todo-mode t)
@@ -14,7 +20,7 @@
 ;; org babel stuff
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((ditaa . t) (shell . t)))
+ '((ditaa . t) (shell . t) ))
 (setq org-ditaa-jar-path "~/.emacs.d/links/ditaa.jar")
 
 ;;org-tempo makes it faster to input source blocks

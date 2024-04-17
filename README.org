@@ -7,14 +7,14 @@
  =M-x all-the-icons-install-fonts=
 * Packages
 ** vterm
-need to install cmake
+need to install =cmake=
 *** Homebrew 
 #+begin_src
 brew install cmake
 #+end_src
 
 *** Nixos
-add this to your home.nix to install emacs with vterm built in.
+add this to your =home.nix= to install emacs with vterm built in.
 #+begin_src nix
 programs.emacs = {
 	enable = true;
