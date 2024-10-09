@@ -1,13 +1,14 @@
-;; this file will keep all general themeing 
+;; This will be for themeing of emacs
 (require 'set-font-height)
+;;; Code:
 (use-package doom-themes
   :straight t
   :ensure t
   :config
   ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-tokyo-night t)
+ ;; (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  ;;(load-theme 'doom-ayu-dark t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
