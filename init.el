@@ -39,3 +39,5 @@
 (require 'init-code)
 ;; navigation stuff like tabs/windows/buffers
 (require 'init-navigation)
+;; Different settings for diiferent os
+(require 'init-system)

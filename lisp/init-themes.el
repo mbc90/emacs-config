@@ -1,14 +1,10 @@
 ;; This will be for themeing of emacs
-(require 'set-font-height)
+(require 'set-themes)
 ;;; Code:
 (use-package doom-themes
   :straight t
   :ensure t
   :config
-  ;; Global settings (defaults)
- ;; (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  ;;(load-theme 'doom-ayu-dark t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -19,7 +15,8 @@
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
-
+;; call set theme function
+(set-theme)
 ;; font
 (set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height (set-font-height))
 
