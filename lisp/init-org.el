@@ -20,7 +20,7 @@
 ;; org babel stuff
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((ditaa . t) (shell . t) ))
+ '((ditaa . t) (shell . t) (R . y)))
 (setq org-ditaa-jar-path "~/.emacs.d/links/ditaa.jar")
 
 ;;org-tempo makes it faster to input source blocks

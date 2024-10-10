@@ -1,3 +1,4 @@
+;; Tree Sitter Stuff
 (use-package tree-sitter
   :straight t)
 (use-package tree-sitter-langs
@@ -5,26 +6,26 @@
 
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
+
+(global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+;; -----------------------------------------------
+;; lang-modes
 ;; nix-mode to make nix pretty
 (use-package nix-mode
   :straight t
   :mode "\\.nix\\'")
-
-(global-tree-sitter-mode)
-(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
-
 ;; add zig-mode
 (use-package zig-mode
   :straight t)
 ;; add rust-mode
 (use-package rust-mode
   :straight t)
-(use-package flycheck
-  :straight t
-  :ensure t
-  :defer t
-  :diminish
-  :init (global-flycheck-mode))
+;; add swift mode for the swift lang
+(use-package swift-mode
+  :straight t)
+;;-------------------------------
+;; Language server stuff
 (use-package lsp-mode
   :straight t
   :init
@@ -36,13 +37,21 @@
          (c-mode . lsp)
          (c++-mode . lsp)
 	 (zig-mode . lsp)
+	 (mhtml-mode .lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 (use-package lsp-ivy
   :straight t
   :commands lsp-ivy-workspace-symbol)
-
+;; -----------------------------------
+;; auto-complete stuff
+(use-package flycheck
+  :straight t
+  :ensure t
+  :defer t
+  :diminish
+  :init (global-flycheck-mode))
 ;; gives me pretty auto complete boxes
 (use-package company
   :straight t
@@ -52,6 +61,12 @@
 	      ("<tab>" . company-complete-selection))
   (:map lsp-mode-map
 	      ("<tab>" . company-indent-or-complete-common)))
+;; emmet for web-dev auto complete, and other stuff prob
+(use-package emmet-mode
+  :straight t)
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; auto start on any markup mode
+(add-hook 'css-mode-hook 'emmet-mode)  ;; for css
 
 ;; git stuff
 (use-package magit

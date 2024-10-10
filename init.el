@@ -41,3 +41,5 @@
 (require 'init-navigation)
 ;; Different settings for diiferent os
 (require 'init-system)
+;; latex
+(require 'init-latex)
