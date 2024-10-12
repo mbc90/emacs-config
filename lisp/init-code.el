@@ -24,6 +24,8 @@
 ;; add swift mode for the swift lang
 (use-package swift-mode
   :straight t)
+(use-package go-mode
+  :straight t)
 ;;-------------------------------
 ;; Language server stuff
 (use-package lsp-mode
@@ -38,6 +40,7 @@
          (c++-mode . lsp)
 	 (zig-mode . lsp)
 	 (mhtml-mode .lsp)
+	 (go-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
