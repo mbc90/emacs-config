@@ -24,6 +24,7 @@
 ;; add swift mode for the swift lang
 (use-package swift-mode
   :straight t)
+
 (use-package go-mode
   :straight t)
 ;;-------------------------------
@@ -40,13 +41,16 @@
          (c++-mode . lsp)
 	 (zig-mode . lsp)
 	 (mhtml-mode .lsp)
-	 (go-mode . lsp)
+	 (swift-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 (use-package lsp-ivy
   :straight t
   :commands lsp-ivy-workspace-symbol)
+(use-package lsp-sourcekit
+  :straight t
+  :after lsp-mode)
 ;; -----------------------------------
 ;; auto-complete stuff
 (use-package flycheck
