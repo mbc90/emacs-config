@@ -41,6 +41,8 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook))
+(setq dashboard-startup-banner "~/.emacs.d/image/ue-colorful.png")
+(setq dashboard-image-banner-max-width 512)
 (use-package all-the-icons
   :straight t)
 
