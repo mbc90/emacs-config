@@ -6,8 +6,13 @@
 ;; org-roam
 (use-package org-roam
   :straight t
+  :ensure t
+  :init
+  (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory "~/org-roam/"))
+  (org-roam-directory "~/org-roam/")
+  (org-roam-setup))
+(org-roam-db-autosync-mode)
 (use-package emacsql-sqlite :straight t)
 ;; todo highlighting
 (use-package hl-todo :straight t)

@@ -9,4 +9,8 @@ transient
 eln-cache
 session.*
 links
-.cache
+.cache 
+tutorial
+org-roam.db
+.org-id-locations
+bookmarks
