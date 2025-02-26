@@ -3,7 +3,11 @@
   :straight t)
 (use-package tree-sitter-langs
   :straight t)
-
+;; give your brackets a friend
+(electric-pair-mode 1)
+;; stop backup and lock files
+(setq make-backup-files nil)
+(setq create-lockfiles nil)
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
 
@@ -43,6 +47,7 @@
 	 (mhtml-mode .lsp)
 	 (swift-mode . lsp)
 	 (go-mode . lsp)
+	 (csharp-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
