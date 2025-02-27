@@ -13,7 +13,7 @@
   (org-roam-directory "~/org-roam/")
   (org-roam-setup))
 (org-roam-db-autosync-mode)
-(use-package emacsql-sqlite :straight t)
+(use-package emacsql :straight t)
 ;; todo highlighting
 (use-package hl-todo :straight t)
 (setq global-hl-todo-mode t)
