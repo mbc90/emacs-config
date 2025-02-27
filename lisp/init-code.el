@@ -87,5 +87,6 @@
 ;; git stuff
 (use-package magit
   :straight t)
-(setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient")
+(if (eq system-type 'darwin)
+(setq with-editor-emacsclient-executable "/opt/homebrew/bin/emacsclient"))
 (provide 'init-code)
