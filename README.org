@@ -5,7 +5,11 @@
  need to run the following command interactively so that mode line icons
  display correctly:
  =M-x all-the-icons-install-fonts=
+
+ All =init-*.el= configuration files are under the =lisp= directory
 * Packages
+** straight.el
+This configuration uses the [[https://github.com/radian-software/straight.el][straight.el]] package manager
 ** vterm
 need to install =cmake=
 *** Homebrew 
@@ -36,6 +40,36 @@ sudo xbps-install -S cmake libtool
 ** Ditaa
 used to make graphics out of ASCII in org src-blocks. Find where ever =ditaa.jar= is and
 link it to a folder in =.emacs.d=. the default folder in =init-org.el= is =links=
+
+** LSP-Mode
+A few major-modes for lanugages have been enabled for code completion in =init-code.el= 
+#+begin_src elisp
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+
+	 ;; c lsp lang
+     (c-mode . lsp)
+     (c++-mode . lsp)
+	 (zig-mode . lsp)
+	 (mhtml-mode .lsp)
+	 (swift-mode . lsp)
+	 (go-mode . lsp)
+	 (csharp-mode . lsp)
+     ;; if you want which-key integration
+     (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
+#+end_src>
+For these to work, just installing the language server of each language should do it.
+If you want a new language, install the major mode and append the list of languages
+#+begin_src elisp
+;; install major mode
+(use-package lang-mode
+  :straight t)
+
+;; Append to list
+(lang-mode . lsp)
+#+end_src>
+
 
 
 * Key bindings
