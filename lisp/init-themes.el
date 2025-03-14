@@ -15,10 +15,18 @@
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
+(use-package nerd-icons
+  :straight t)
+(require 'nerd-icons)
+(use-package catppuccin-theme
+  :straight t)
 ;; call set theme function
-(set-theme)
+(add-hook 'after-init-hook (lambda()(load-theme 'catppuccin t)))
+(setq catppuccin-flavor 'frappe)
+(catppuccin-reload)
+
 ;; font
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height (set-font-height))
+(set-face-attribute 'default nil :font "Fira Code Nerd Font" :height (set-font-height))
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
@@ -41,8 +49,18 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook))
+(add-hook 'server-after-make-frame-hook (lambda () (dashboard-refresh-buffer)))
+
+;; (setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+
+
 (setq dashboard-startup-banner "~/.emacs.d/image/ue-colorful.png")
 (setq dashboard-image-banner-max-width 512)
+;; this makes the buffer on emacsclient be dashboard
+(setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
+(setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+(setq dashboard-set-heading-icons nil)
+(setq dashboard-set-file-icons t)
 (use-package all-the-icons
   :straight t)
 

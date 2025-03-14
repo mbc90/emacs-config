@@ -12,7 +12,7 @@
   (if (eq system-type 'darwin)
       (progn 120)
   (progn 95)))
-
+;; only used if I set global theme through nixos
   (defun set-theme()
     (if (eq system-type 'darwin)
 

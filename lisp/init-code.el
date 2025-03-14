@@ -83,7 +83,11 @@
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; auto start on any markup mode
 (add-hook 'css-mode-hook 'emmet-mode)  ;; for css
-
+;; direnv for nix flake enabled development environment
+(use-package direnv
+  :straight t
+  :config
+  (direnv-mode))
 ;; git stuff
 (use-package magit
   :straight t)
