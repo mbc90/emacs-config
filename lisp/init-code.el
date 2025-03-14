@@ -87,7 +87,9 @@
 (use-package direnv
   :straight t
   :config
-  (direnv-mode))
+  (if (eq system-type 'gnu/linux)
+      (direnv-mode)))
+  
 ;; git stuff
 (use-package magit
   :straight t)
