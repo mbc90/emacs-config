@@ -12,6 +12,12 @@
   (if (eq system-type 'darwin)
       (progn 120)
   (progn 95)))
+
+(defun set-font ()
+  "Check host name and return font"
+  (if (eq system-type 'darwin)
+        (progn "FiraCode Nerd Font Mono")
+        (progn "Iosevka Nerd Font Mono")))
 ;; only used if I set global theme through nixos
   (defun set-theme()
     (if (eq system-type 'darwin)

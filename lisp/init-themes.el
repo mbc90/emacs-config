@@ -26,7 +26,7 @@
 (catppuccin-reload)
 
 ;; font
-(set-face-attribute 'default nil :font "Fira Code Nerd Font" :height (set-font-height))
+(set-face-attribute 'default nil :font (set-font) :height (set-font-height))
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
